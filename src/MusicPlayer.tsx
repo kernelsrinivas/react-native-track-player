@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect } from 'react';
 import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
-import TrackPlayer, { TrackPlayerEvents, STATE_PLAYING } from './internals';
+import TrackPlayer from './internals';
+//import TrackPlayer, { TrackPlayerEvents, STATE_PLAYING } from './internals';
 
 interface Props {
   trackId: string;
@@ -25,11 +26,11 @@ const MusicPlayer = (props:Props): React.ReactNode => {
       title: 'Your Audio Track Title',
       artist: 'Your Artist Name',
     });
-    TrackPlayer.addEventListener(TrackPlayerEvents.PLAYBACK_STATE, ({ state }) => {
-      if (state === STATE_PLAYING) {
-        console.log('Track is playing');
-      }
-    });
+    // TrackPlayer.addEventListener(TrackPlayerEvents.PLAYBACK_STATE, ({ state }) => {
+    //   if (state === STATE_PLAYING) {
+    //     console.log('Track is playing');
+    //   }
+    // });
   }, [props]);
 
   const playTrack = async () => {
