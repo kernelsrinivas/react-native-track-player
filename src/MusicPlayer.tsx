@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect } from 'react';
 import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
 import * as TrackPlayer from './trackPlayer';
-import { TrackPlayerEvents, STATE_PLAYING } from './constants';
+import { TrackPlayerEvents, STATE_PLAYING } from './types';
 // import TrackPlayer, { TrackPlayerEvents, STATE_PLAYING } from 'react-native-track-player';
 
 interface Props {
